@@ -1,20 +1,63 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mz-progress
+  [backgroundClass]="'blue lighten-4'"
+  [percentage]="55"
+  [progressClass]="'blue'">
+</mz-progress>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1>{{title}}</h1>
+      <app-heroes></app-heroes>
+    </div>
+  </div>
+  <div class="row">
+    <mz-badge
+      [value]="4"
+      [caption]="'My caption'"
+      [badgeClass]="'blue'"
+      [new]="true">
+    </mz-badge>
 
+    <mz-collection>
+      <mz-collection-item>Collection item 1</mz-collection-item>
+      <mz-collection-item>Collection item 2</mz-collection-item>
+      <mz-collection-item>Collection item 3</mz-collection-item>
+      <mz-collection-item>Collection item 4</mz-collection-item>
+    </mz-collection>
+
+    <mz-dropdown
+      [id]="'dropdown-demo'"
+      [dropdownButtonId]="'btn-dropdown-demo'"
+    >
+      <mz-dropdown-item><a href="#!">One</a></mz-dropdown-item>
+      <mz-dropdown-item><a href="#!">Two</a></mz-dropdown-item>
+      <mz-dropdown-divider></mz-dropdown-divider>
+      <mz-dropdown-item><a href="#!">Three</a></mz-dropdown-item>
+    </mz-dropdown>
+
+    <a mz-button id="btn-dropdown-demo" href="#">Dropdown</a>
+  </div>
+</div>
+<mz-sidenav
+  [id]="'sidenav-demo'"
+  [collapseButtonId]="'btn-sidenav-demo'">
+  <mz-sidenav-header>
+    Sidenav header
+  </mz-sidenav-header>
+  <mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
+  <mz-sidenav-link>
+    <a href="#">First Link</a>
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link [active]="true">
+    <a href="#">Active Link</a>
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link>
+    <a href="#" class="waves-effect">Second Link With Waves</a>
+  </mz-sidenav-link>
+</mz-sidenav>
+ <button mz-button id="btn-sidenav-demo">
+  Open
+</button>
